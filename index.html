@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Effective JavaScript: Frogger</title>
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<title>Key Katcha Game</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 <body>
-    <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
+	<header>
+		<h1>Key Katcha</h1>
+	</header>
+	<nav>
+		<div>
+			<h2>Lives: </h2><h2 id="lifeCount"></h2> 
+		</div>
+		<div>
+			<h2>Keys: </h2><h2 id="keyCount"></h2> 
+		</div>		
+		<button id="start">Start</button>
+	</nav>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="js/resources.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/engine.js"></script>
 </body>
 </html>

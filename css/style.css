@@ -1,3 +1,66 @@
 body {
-    text-align: center;
+	text-align: center;
+	background-image: url(http://static1.squarespace.com/static/532b3fbfe4b0c5a9ade0bc44/t/534c33b7e4b0e2dbda7631f5/1397502918765/);
+}
+
+h1 {
+	font: 72px "Oswald", sans-serif;
+	color: #FFFFFF;
+	text-shadow: 2px 5px 3px #333333;
+	margin: 0;
+}
+
+h2 {
+	font: 32px "Oswald", sans-serif;
+	display: inline-block;
+	color: #FFFFFF;
+	text-shadow: 2px 5px 3px #333333;
+	margin: 0;
+}
+
+button {
+	font: 1.1em bold "Oswald", sans-serif;
+	display: block;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	margin: 20px auto;
+	color: #ccc;
+	background-color: #555;
+	background: -webkit-linear-gradient(#888, #555);
+	background: linear-gradient(#888, #555);
+	border: 0 none;
+	border-radius: 3px;
+	text-shadow: 0 -1px 0 #000;
+	box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+	cursor: pointer;
+	-webkit-transition: all 150ms ease;
+	transition: all 150ms ease;
+}
+
+button:hover, 
+button:focus {
+	-webkit-animation: pulsate 1.2s linear infinite;
+	animation: pulsate 1.2s linear infinite;
+}
+
+@-webkit-keyframes pulsate {
+	0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+	50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+	100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+}
+
+@keyframes pulsate {
+	0%   { color: #ddd; text-shadow: 0 -1px 0 #000; }
+	50%  { color: #fff; text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff; }
+	100% { color: #ddd; text-shadow: 0 -1px 0 #000; }
+}
+
+button:active {
+	color: #fff;
+	text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+	box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0,0,0,0.9);
+	-webkit-transform: translateY(3px);
+	transform: translateY(3px);
+	-webkit-animation: none;
+	animation: none;
 }
