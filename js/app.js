@@ -50,9 +50,9 @@ Game.prototype.startGame = function(lives, keys) {
 
 /* function to generate a random range. */
 Game.prototype.random = function(low,high) {
-		var range = high - low + 1;
-		return Math.floor(Math.random() * range) + low;
-	};
+	var range = high - low + 1;
+	return Math.floor(Math.random() * range) + low;
+};
 
 /* The super class for all entities within the game. */
 var Entity = function(x,y,width,height) {
@@ -103,9 +103,9 @@ Enemy.prototype = Object.create(Entity.prototype);
 Enemy.prototype.constructor = Enemy;
 
 /* Function to update the enemies position, checks if the enemy has gone off screen, if so then it resets the enemies position to the left again. */
-Enemy.prototype.update = function(dt) {
+Enemy.prototype.update = function(dt,canvasWidth) {
 	this.x = this.x + this.speed * dt;
-	if (this.x > 500) {
+	if (this.x > canvasWidth) {
 		this.x = -60;
 		this.speed = game.random(100,600);
 	}
@@ -134,7 +134,7 @@ Player.prototype.update = function() {
 
 	if (this.collisionCheck(key)) {
 		key.resetKeyPosition();
-		player.keyCount = player.keyCount + 1;
+		this.keyCount = this.keyCount + 1;
 		game.updateCounts();
 	}
 };

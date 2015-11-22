@@ -45,7 +45,7 @@ var Engine = (function(global) {
         /* Call our update/render functions, pass along the time delta to
          * our update function since it may be used for smooth animation.
          */
-        update(dt);
+        update(dt,canvas.width);
         render();
 
         /* Set our lastTime variable which is used to determine the time delta
@@ -78,9 +78,8 @@ var Engine = (function(global) {
      * functionality this way (you could just implement collision detection
      * on the entities themselves within your app.js file).
      */
-    function update(dt) {
-        updateEntities(dt);
-        // checkCollisions();
+    function update(dt,canvasWidth) {
+        updateEntities(dt,canvasWidth);
     }
 
     /* This is called by the update function  and loops through all of the
@@ -90,9 +89,9 @@ var Engine = (function(global) {
      * the data/properties related to  the object. Do your drawing in your
      * render methods.
      */
-    function updateEntities(dt) {
+    function updateEntities(dt,canvasWidth) {
         game.allEnemies.forEach(function(enemy) {
-            enemy.update(dt);
+            enemy.update(dt,canvasWidth);
         });
         player.update();
     }
